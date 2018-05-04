@@ -19,13 +19,25 @@ namespace Sample_01
             SqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                if (dr["Uername"].ToString().Length>10)
+                if (dr["Username"].ToString().Length>10)
                 {
                     p.Response.Write(dr["Username"].ToString() + "<br/>");
                 }
             }
             dr.Close();
             con.Close();
+        }
+        public static void LINQQuery(Page p)
+        {
+            string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["LinqDBConnectionString"].ConnectionString;
+            LinqDBDataContext db=new LinqDBDataContext(connectionString );
+            var results=from u in db.UserInfo
+                        where u.Username.Length>10
+                        select u;
+            foreach (var u in results)
+	{
+                p.Response.Write(u.Username+"<br/>");
+	}
         }
     }
 }

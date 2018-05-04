@@ -23,7 +23,10 @@ namespace Sample_01
                 //LINQQuery();
                 //Response.Write("<br/>");
 
-                _1_4_2.OldQurey(this);
+                //_1_4_2.OldQurey(this); 
+                //_1_4_2.LINQQuery(this);
+
+               
             }
         }
         void LINQQueryData()
