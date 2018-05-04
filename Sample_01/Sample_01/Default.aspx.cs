@@ -14,14 +14,16 @@ namespace Sample_01
         {
             if (!Page.IsPostBack)
             {
-                LINQQueryData();
-                Response.Write("<br/>");
+                //LINQQueryData();
+                //Response.Write("<br/>");
 
-                OldQuery();
-                Response.Write("<br/>");
+                //OldQuery();
+                //Response.Write("<br/>");
 
-                LINQQuery();
-                Response.Write("<br/>");
+                //LINQQuery();
+                //Response.Write("<br/>");
+
+                _1_4_2.OldQurey(this);
             }
         }
         void LINQQueryData()
