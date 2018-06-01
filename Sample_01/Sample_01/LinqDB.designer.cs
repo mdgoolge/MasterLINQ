@@ -36,7 +36,7 @@ namespace Sample_01
     #endregion
 		
 		public LinqDBDataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["LinqDBConnectionString1"].ConnectionString, mappingSource)
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["LinqDBConnectionString"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}

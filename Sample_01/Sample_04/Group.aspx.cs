@@ -11,7 +11,7 @@ namespace Sample_04
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            GroupQuery();
         }
         private void GroupQuery()
         {   ///构建数据源
