@@ -11,6 +11,11 @@ namespace _5_7
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            ElementAt();
+        }
+
+        private void ElementAt()
+        {
             int[] ints = new int[100];
             for (int i = 0; i < 100; i++)
             {
